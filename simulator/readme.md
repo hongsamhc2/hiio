@@ -7,7 +7,8 @@
 ```bash
 git clone https://github.com/hongsamhc2/hiio.git
 cd ./hiio/simulator
-Scripts/activate.bat
+.\simulator\Scripts\activate.bat <= windows
+./simulator/Scripts/activate <= Linux
 python name.py --num 30 --filepath ./names.txt
 ```
 

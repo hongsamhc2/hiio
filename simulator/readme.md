@@ -5,8 +5,8 @@
 ## 명령어
 ---
 ```bash
-git clone https://github.com/hongsamhc2/hongsamhc2.github.io.git
-cd ./src/packages/simulator
+git clone https://github.com/hongsamhc2/hiio.git
+cd ./hiio/simulator
 Scripts/activate.bat
 python name.py --num 30 --filepath ./names.txt
 ```

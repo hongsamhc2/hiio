@@ -1,5 +1,6 @@
 import json
-from flask import Flask,jsonify,request
+import requests
+from flask import Flask,jsonify,request,redirect
 from flask_cors import CORS
 from EvCharge import EvCharge 
 
@@ -8,6 +9,8 @@ ev = EvCharge()
 app = Flask(__name__, static_url_path='/static')
 CORS(app)
 
+    
+    
 @app.route('/ev/info',methods=['GET','POST'])
 def evinfo():
     origin_url = request.origin

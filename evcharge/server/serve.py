@@ -1,13 +1,13 @@
 import json
 import requests
 from flask import Flask,jsonify,request,redirect
-from flask_cors import CORS
+# from flask_cors import CORS
 from EvCharge import EvCharge 
 
 registered_url = ['http://127.0.0.1:5500','http://localhost:8080']
 ev = EvCharge()
 app = Flask(__name__, static_url_path='/static')
-CORS(app)
+# CORS(app)
 
     
     

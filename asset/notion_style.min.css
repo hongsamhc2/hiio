@@ -1,8 +1,4 @@
-html {  -webkit-print-color-adjust: exact;}
-* {  box-sizing: border-box;  -webkit-print-color-adjust: exact;}
-html,body {  margin: 0;  padding: 0;}
-@media only screen {  body {    margin: 2em auto;    max-width: 900px;    color: rgb(55, 53, 47);  }}
-body {  line-height: 1.5;  white-space: pre-wrap;}
+
 .notion-style .page-body a,.notion-style .page-body a.visited {
   color: inherit;  text-decoration: underline;}
 .notion-style .page-body .pdf-relative-link-path {

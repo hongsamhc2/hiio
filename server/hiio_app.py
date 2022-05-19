@@ -2,11 +2,13 @@ from flask import Flask,request,make_response
 from flask_cors import CORS
 from flask_restx import Api, Resource
 from oauthJWT import JWTSCPACE
+from tino import TINO
 app = Flask(__name__,static_url_path='/static')
 api = Api(app)
 CORS(app)
 
 api.add_namespace(JWTSCPACE,'/jwt')
+api.add_namespace(TINO,'/tino')
 
 
 @app.before_request

@@ -1,6 +1,6 @@
 from flask_restx import Resource,Api,Namespace
 from flask import request
-from secret import tistory_client_secret
+from secret import tino_dev_client_secret,tino_prod_client_secret
 import requests
 TINO = Namespace('tinoModule')
 
@@ -11,8 +11,12 @@ class getToken(Resource):
         code = data['code']
         client_id = data['clientId']
         redirect_uri = data['redirectUri']
-        
-        url = f"https://www.tistory.com/oauth/access_token?client_id={client_id}&client_secret={tistory_client_secret}&redirect_uri={redirect_uri}&code={code}&grant_type=authorization_code"
+        if data['env'] =='development':
+            secret_key = tino_dev_client_secret
+        else:
+            secret_key = tino_prod_client_secret
+            
+        url = f"https://www.tistory.com/oauth/access_token?client_id={client_id}&client_secret={secret_key}&redirect_uri={redirect_uri}&code={code}&grant_type=authorization_code"
         r = requests.get(url)
         if r.status_code ==200:
             t = r.text.split('=')[-1]
